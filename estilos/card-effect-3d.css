@@ -27,38 +27,7 @@ body {
     transform-style: preserve-3d;
     cursor: pointer;
 }
-/*
-.container .box::before {
-    content: 'NIKE';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 6em;
-    font-weight: 900;
-    color: #ffffff;
-    font-style: italic;
-    opacity: 0;
-    transition: 0.5s;
-}
 
-.container .box::after {
-    content: 'SHOES';
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 5em;
-    font-weight: 900;
-    color: #ffffff;
-    font-style: italic;
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.container .box:hover::before,
-.container .box:hover::after {
-    opacity: 0.04;
-}
-*/
 .container .box .name {
     position: absolute;
     top: 0;
@@ -160,8 +129,4 @@ body {
     padding: 80px 50px 50px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     transition: 0.5s;   
-}
-
-#popup .content {
-
 }
