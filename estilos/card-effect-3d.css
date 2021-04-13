@@ -20,14 +20,14 @@ body {
 .container .box {
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 460px;
     margin: 40px;
     background-color: #232323;
     border-radius: 20px;
     transform-style: preserve-3d;
     cursor: pointer;
 }
-
+/*
 .container .box::before {
     content: 'NIKE';
     position: absolute;
@@ -58,7 +58,7 @@ body {
 .container .box:hover::after {
     opacity: 0.04;
 }
-
+*/
 .container .box .name {
     position: absolute;
     top: 0;
@@ -67,14 +67,14 @@ body {
     color: #ffffff;
     width: 100%;
     transform-style: preserve-3d;
-    transform: translate3d(0, 0, 110px);
+    transform: translate3d(0, 0, 50px);
     transition: 0.5s;
     opacity: 0;
     z-index: 11;
 }
 
 .container .box:hover .name {
-    top: 40px;
+    top: 130px;
     opacity: 1;
 }
 
@@ -82,6 +82,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 50%;
+    width: 200px;
     transform-style: preserve-3d;
     transform: translate3d(-50%, 0, 75px);
     color: #ffffff;
@@ -113,11 +114,18 @@ body {
     z-index: 10;
 }
 
+.container .box:hover .circle {
+    top: 80px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+}
+
 .container .box .product {
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 300px;
+    max-height: 200px;
     transition: 0.5s;
     transform-style: preserve-3d;
     transform: translate3d(-50%, -50%, 50px);
@@ -125,7 +133,10 @@ body {
 }
 
 .container .box:hover .product {
-    transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+    top: 80px;
+    left: 50%;
+    max-height: 100px;
+    transform: translate3d(-50%, -50%, 100px);
 }
 
 .container .box:nth-child(1) .circle,
@@ -136,4 +147,21 @@ body {
 .container .box:nth-child(2) .circle,
 .container .box:nth-child(2) .buy {
     background-color: #9bdc28;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #ffffff;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;   
+}
+
+#popup .content {
+
 }
