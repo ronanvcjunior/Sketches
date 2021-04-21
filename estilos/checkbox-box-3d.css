@@ -1,0 +1,158 @@
+body {
+    background: #000;
+}
+
+.container {
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    border: 1px solid red;
+}
+
+.box3d {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: 6s;
+}
+
+.container:hover .box3d {
+    transform: perspective(1000px) rotateX(360deg) rotateY(360deg);
+}
+
+.box3d .area {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+.box3d #area1 {
+    background: rgba(255, 0, 0, 0.5);
+    transform: translateZ(200px);
+}
+
+.box3d #area2 {
+    background: rgba(0, 255, 0, 0.5);
+    transform:rotateX(90deg)translateZ(200px);
+}
+
+.box3d #area3 {
+    background: rgba(0, 0, 255, 0.5);
+    transform: rotateX(180deg) translateZ(200px);
+}
+
+.box3d #area4 {
+    background: rgba(255, 255, 0, 0.5);
+    transform: rotateX(270deg) translateZ(200px);
+}
+
+.box3d #area5 {
+    background: rgba(255, 0, 255, 0.5);
+    transform: rotateY(90deg)translateZ(200px);
+}
+
+.box3d #area6 {
+    background: rgba(0, 255, 255, 0.5);
+    transform: rotateY(270deg) translateZ(200px);
+}
+
+#tv {
+    position: relative;
+    max-width: 666px;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: 2s;
+    -moz-transition: 2s;
+    transform: perspective(1000px) rotateY(-25deg);
+}
+
+.container:hover #tv{
+    transform: perspective(1000px) rotatey(360deg);
+}
+
+.superior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../imagens/aco2.jpg);
+}
+
+#superior4::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#superior1::before,
+#superior3::before,
+#superior5::before,
+#superior6::before {
+    content: '';
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+    width: 100%;
+    height: 100%;
+}
+
+#superior1 #logoTV,
+#superior3 #logoTV2 {
+    position: absolute;
+}
+
+#superior1 #logoTV #logoTVCor1,
+#superior3 #logoTV2 #logoTVCor2 {
+    fill: #0000ff;
+    transition: 0.5s;
+}
+
+.monitor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#monitor1,
+#monitor3 {
+    backdrop-filter: blur(1px);
+}
+
+#monitor5,
+#monitor6 {
+    background: url(../imagens/aco3.jpg);
+}
+
+.inferior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../imagens/madeira.jpg);
+}
+
+#inferior1::before,
+#inferior3::before,
+#inferior5::before,
+#inferior6::before {
+    content: '';
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+    width: 100%;
+    height: 100%;
+}
+

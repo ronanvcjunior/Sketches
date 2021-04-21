@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box 3D</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" href="../estilos/checkbox-box-3d.css">
+</head>
+<body onresize="larguraTela()">
+    <div class="container">
+        <div class="box3d">
+            <div class="area" id="area1"></div>
+            <div class="area" id="area2"></div>
+            <div class="area" id="area3"></div>
+            <div class="area" id="area4"></div>
+            <div class="area" id="area5"></div>
+            <div class="area" id="area6"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="tv">
+            <div class="superior" id="superior1">
+                <svg id="logoTV" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path id="logoTVCor1" d="M0,21.333l192,341.333L384,21.333H0z M72,64h240L192,277.333L72,64z"/>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </div>
+            <div class="superior" id="superior2"></div>
+            <div class="superior" id="superior3">
+                <svg id="logoTV2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path id="logoTVCor2" d="M0,21.333l192,341.333L384,21.333H0z M72,64h240L192,277.333L72,64z"/>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </div>
+            <div class="superior" id="superior4"></div>
+            <div class="superior" id="superior5"></div>
+            <div class="superior" id="superior6"></div>            
+
+            <canvas class="monitor" id="monitor1"></canvas>
+            <div class="monitor" id="monitor2"></div>
+            <canvas class="monitor" id="monitor3"></canvas>
+            <div class="monitor" id="monitor4"></div>
+            <div class="monitor" id="monitor5"></div>
+            <div class="monitor" id="monitor6"></div>
+
+            <div class="inferior" id="inferior1"></div>
+            <div class="inferior" id="inferior2"></div>
+            <div class="inferior" id="inferior3"></div>
+            <div class="inferior" id="inferior4"></div>
+            <div class="inferior" id="inferior5"></div>
+            <div class="inferior" id="inferior6"></div>
+        </div>
+    </div>
+
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel" src="../js/checkbox-box-3d.js"></script>
+</body>
+</html>
