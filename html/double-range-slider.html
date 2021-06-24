@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Range Slider</title>
+    
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    
+    <link rel="stylesheet" href="../estilos/double-range-slider.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="values">
+            <span id="range1">
+                0
+            </span>
+            <span> &dash; </span>
+            <span id="range2">
+                100
+            </span>
+        </div>
+        <div class="container">
+            <div class="slider-track"></div>
+            <input type="range" min="0" max="100" value="30" id="slider-1" oninput="slideOne()">
+            <input type="range" min="0" max="100" value="70" id="slider-2" oninput="slideTwo()">
+        </div>
+    </div>
+
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!--Script-->
+    <script src="../js/double-range-slider.js"></script>
+</body>
+</html>
