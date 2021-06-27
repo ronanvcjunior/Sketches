@@ -65,6 +65,7 @@ input[type="range"]::-webkit-slider-thumb{
     height: 1.7em;
     width: 1.7em;
     background-color: #3264fe;
+    border: none;
     cursor: pointer;
     margin-top: -9px;
     pointer-events: auto;
@@ -78,6 +79,7 @@ input[type="range"]::-moz-range-thumb{
     cursor: pointer;
     border-radius: 50%;
     background-color: #3264fe;
+    border: none;
     pointer-events: auto;
 }
 
@@ -88,6 +90,7 @@ input[type="range"]::-ms-thumb{
     cursor: pointer;
     border-radius: 50%;
     background-color: #3264fe;
+    border: none;
     pointer-events: auto;
 }
 
