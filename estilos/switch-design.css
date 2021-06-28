@@ -1,0 +1,313 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #3d3d3d, #212121);
+    background-attachment: fixed;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.switch {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    width: 200px;
+    height: 200px;
+}
+
+.switch ~ .switch {
+    margin-left: 40px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+.switch1 {
+    width: 160px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.switch1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 164px;
+    height: 84px;
+    border-radius: 42px;
+    background-color: red;
+    transform: translateX(-2px) translateY(-12px);
+    z-index: 0;
+    background-image: linear-gradient(135deg, #969494, #fff);
+}
+
+.switch1 input {
+    display: none;
+}
+
+.switch1 div {
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(135deg, #8b8e8c, #f4f4f4);
+    border-radius: 25px;
+}
+
+.switch1 div::before {
+    content: "";
+    position: absolute;
+    width: 116px;
+    height: 46px;
+    left: 2px;
+    top: 2px;
+    border-radius: 23px;
+    background-color: red;
+    box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, 0.8);
+    transition: 0.2s;
+}
+
+.switch1 i {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-image: linear-gradient(-45deg, #9e9e9e 20%, #f4f4f4);
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.8);
+    transition: 0.25s;
+    transform: translateX(20px);
+}
+
+.switch1 i::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 52px;
+    height: 52px;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+    background-color: #d5d4d4;
+    z-index: 1;
+}
+
+.switch1 input:checked ~ i {
+    transform: translateX(80px);
+}
+
+.switch1 input:checked + div::before {
+    background-color: #95ff00;
+    box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, 0.6);
+}
+
+.switch1 input:checked + div > .off {
+    color: transparent;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0);
+}
+
+.switch1 input:checked + div > .on {
+    color: #1234;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.on,
+.off {
+    text-transform: uppercase;
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    font-weight: bold;
+    z-index: 1;
+    letter-spacing: 1px;
+    transition: 0.25px;
+    user-select: none;
+}
+
+.off {
+    left: initial;
+    right: 15px;
+    color: #1234;
+}
+
+/*--------------------------------------------------------------------------------------*/
+.switch2 {
+    width: 8rem;
+    height: 4.5rem;
+    background-color: #dfe9f5;
+    position: relative;
+    overflow: hidden;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.05),
+                5px 5px 10px rgba(0, 0, 0, 0.05);
+    transform: rotate(90deg);
+}
+
+.switch2 label {
+    display: flex;
+    align-content: center;
+    width: 120%;
+    height: 100%;
+    background-color: #dfe9f5;
+    cursor: pointer;
+}
+
+.switch2 label::after {
+    width: 45%;
+    text-align: center;
+}
+
+.switch2 label span {
+    display: flex;
+    width: 55%;
+    height: 100%;
+    perspective: 10em;
+    margin-left: 6px;
+    border-radius: 1em;
+}
+
+.switch2 label span::before,
+.switch2 label span::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    transform: preserve-3d;
+    transition: all 0.3s ease;
+    background-color: #ee351c;
+}
+
+.switch2 label span::after {
+    border-radius: 0 1em 1em 0;
+}
+
+.switch2 label span::before {
+    border-radius: 1em 0 0 1em;
+}
+
+#switch2 {
+    position: absolute;
+    visibility: hidden;
+}
+
+#switch2:checked + label::after {
+    content: '\2022';
+    font-size: 2em;
+    color: #62b84e;
+}
+
+#switch2:checked + label span {
+    background-color: #62b84e;
+}
+
+#switch2:checked + label span::before {
+    background-color: #82c772;
+    transform: rotateY(40deg);
+    transform-origin: 100% 0;
+    box-shadow: 5px 0 0 #62b84e;
+}
+
+#switch2:checked + label span::after {
+    background-color: #62b84e;
+}
+
+#switch2:not(:checked) + label::after {
+    content: '\2022';
+    font-size: 2em;
+    color: red;
+}
+
+
+#switch2:not(:checked) + label span {
+    background-color: #ee351c;
+}
+
+#switch2:not(:checked) + label span::after {
+    background-color: #f25f4b;
+    transform: rotateY(-40deg);
+    transform-origin: 0 0;
+    box-shadow: 5px 0 0 #ee351c;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+.switch:nth-child(3),
+.switch:nth-child(3)::before,
+.switch:nth-child(3)::after {
+    transition: all 0.2s ease-in 0s;
+}
+
+#switch3 {
+    display: none;
+}
+
+.switch:nth-child(3) label {
+    transform: scale(0.45);
+    padding: 0.2vmin;
+    background-color: #151515;
+    box-shadow: #00000026 0 -0.5vmin 1vmin 1vmin, 0 0 0 0.25vmin 0.5vmin #000, 0 0 1vmin #111 inset;
+    cursor: pointer;
+    margin: 5vmin;
+    border: 2vmin solid #111111;
+    border-color: #010101 #121212 #222222 #181818;
+}
+
+.switch:nth-child(3) label::after,
+.switch:nth-child(3) label::before {
+    content: '0';
+    width: 100%;
+    min-width: 15vmin;
+    height: 20vmin;
+    float: left;
+    text-align: center;
+    background-color: #087f0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0 solid #292929;
+    border-bottom: 0 solid transparent;
+    color: #ffffffb3;
+    font-family: Arial, Helvetica, serif;
+    text-shadow: -1px -1px #0000004a;
+    border-radius: 1px 1px 0 0;
+    font-size: 6vmin;
+}
+
+.switch:nth-child(3) label::before {
+    content: '';
+    border-top: 2vmin solid #005200;
+}
+
+.switch:nth-child(3) label::after {
+    background-color: #17a51b;
+    border-radius: 0 0 1px 1px;
+}
+
+#switch3:checked + label::before {
+    background-color: #34ad37;
+    border-top: 0 solid transparent;
+    box-shadow: 0 0 2vmin  0.15vmin #00ff06, 0 1vmin 10vmin 0.15vmin #00ff06  inset;
+}
+
+#switch3:checked + label::after {
+    background-color: #017903;
+    border-bottom: 2vmin solid #007300;
+    box-shadow: 0 0 2vmin 0.15vmin #00ff06, 0 -1vmin 10vmin 0.15vmin #00ff06 inset;
+}
+
